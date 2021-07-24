@@ -6,3 +6,14 @@ footer {
     width: 80%;
     margin-left: 10%;
 }
+
+.buttons{
+    display: inline-block;
+}
+
+.sort-font{
+    color: #262626;
+    font-size: 15px;
+    margin: 0 10px;
+    display: inline-block;
+}

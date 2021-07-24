@@ -21,3 +21,7 @@ Route::get('/declarations/all/{id}/update', [DeclareController::class, 'updateDe
  Route::post('/declarations/all/{id}/update', [DeclareController::class, 'updateDeclarationSubmit'])->name('declaration-update-submit');
 
 Route::get('/declarations/all/{id}/delete', [DeclareController::class, 'deleteDeclaration'])->name('declarationDelete');
+
+Route::get('/declarations/all-by-date-{sort}', [DeclareController::class, 'sortByDate'])->name('sortByDate');
+
+Route::get('/declarations/all-by-price-{sort}', [DeclareController::class, 'sortByPrice'])->name('sortByPrice');

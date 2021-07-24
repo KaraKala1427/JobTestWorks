@@ -83,4 +83,16 @@ class DeclareController extends Controller
         Declaration::find($id)->delete();
         return redirect()->route('allDeclaration')->with('success','Объявление было удалено');
     }
+
+    public function sortByDate($sort){
+        $declarations = Declaration::orderBy('created_at',$sort)->paginate(10);
+        $data = $declarations;
+        return view('declarations', compact('data'));
+    }
+
+    public function sortByPrice($sort){
+        $declarations = Declaration::orderBy('price',$sort)->paginate(10);
+        $data = $declarations;
+        return view('declarations', compact('data'));
+    }
 }
